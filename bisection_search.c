@@ -22,9 +22,9 @@ double bisection(double a, double b, double tol) {
     else
       a = c;
     iter++;
-    printf("iter: %d, error: %le\n",iter,fabs(b-a)/ 2);
+    fprintf(stdout,"%d,%le\n",iter,fabs(b-a)/ 2);
   }
-  printf("iter: %d\n",iter);
+  fprintf(stderr,"iter: %d\n",iter);
   return c;
 }
 
@@ -33,7 +33,7 @@ int main() {
   double root = bisection(a, b, tol);
 
   if (root != -1) {
-    printf("An approximate root is: %f\n", root);
+    fprintf(stderr,"An approximate root is: %f\n", root);
     }
 
     return 0;
