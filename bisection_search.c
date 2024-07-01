@@ -13,7 +13,7 @@ double bisection(double a, double b, double tol) {
 
   double c = a;
   int iter = 0;
-  while ((b-a) / 2 > tol) {
+  while (fabs(b-a) / 2 > tol) {
     c = (a + b) / 2;
     if (f(c) == 0.0)
       break;  // cが根の場合、ループを抜ける
@@ -22,6 +22,7 @@ double bisection(double a, double b, double tol) {
     else
       a = c;
     iter++;
+    printf("iter: %d, error: %le\n",iter,fabs(b-a)/ 2);
   }
   printf("iter: %d\n",iter);
   return c;

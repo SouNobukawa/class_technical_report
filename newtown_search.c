@@ -21,6 +21,7 @@ double newton(double x0, double tol, int max_iter) {
         h = f(x) / df(x);
         x = x - h;  // 次の近似値を計算
         iter++;
+	printf("iter: %d, error: %le\n",iter,h);
     }
 
     if (iter >= max_iter) {
