@@ -21,14 +21,15 @@ double newton(double x0, double tol, int max_iter) {
         h = f(x) / df(x);
         x = x - h;  // 次の近似値を計算
         iter++;
-	printf("iter: %d, error: %le\n",iter,h);
+	//	printf("iter: %d, error: %le\n",iter,h);
+	printf("%d,%le\n",iter,h);
     }
 
     if (iter >= max_iter) {
-        printf("Error: Maximum iterations reached.\n");
+      fprintf(stderr,"Error: Maximum iterations reached.\n");
         return -1;  // 収束しない場合はエラーを返す
     }
-    printf("iter:%d\n",iter);
+    fprintf(stderr,"iter:%d\n",iter);
     return x;
 }
 
@@ -39,7 +40,7 @@ int main() {
 
     double root = newton(x0, tol, max_iter);
     if (root != -1) {
-        printf("An approximate root is: %f\n", root);
+      fprintf(stderr,"An approximate root is: %f\n", root);
     }
 
     return 0;
