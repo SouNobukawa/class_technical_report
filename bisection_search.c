@@ -2,7 +2,7 @@
 #include <math.h>
 
 double f(double x) {
-  return cos(x) - pow(x, 3);
+  return cos(x) - pow(x, 2);
 }
 
 double bisection(double a, double b, double tol) {

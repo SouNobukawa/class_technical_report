@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <math.h>
 
-// 方程式 f(x) = cos(x) - x^3
+// 方程式 f(x) = cos(x) - x^2
 double f(double x) {
-    return cos(x) - pow(x, 3);
+    return cos(x) - pow(x, 2);
 }
 
-// 導関数 f'(x) = -sin(x) - 3x^2
+// 導関数 f'(x) = -sin(x) - 2x
 double df(double x) {
-    return -sin(x) - 3 * pow(x, 2);
+    return -sin(x) - 2 * x;
 }
 
 // ニュートン法による根の計算
