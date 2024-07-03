@@ -22,7 +22,7 @@ double bisection(double a, double b, double tol) {
     else
       a = c;
     iter++;
-    fprintf(stdout,"%d,%le\n",iter,fabs(b-a)/ 2);
+    fprintf(stdout,"%d,%le,%le\n",iter,fabs(b-a)/ 2,c);
   }
   fprintf(stderr,"iter: %d\n",iter);
   return c;
